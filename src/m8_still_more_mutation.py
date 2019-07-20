@@ -148,13 +148,9 @@ def MUTATE_delete_negatives(numbers):
     for k in range(len(numbers)):
         if numbers[k] >= 0:
             seq = seq + [numbers[k]]
-    print(seq)
-    for k in range(len(numbers)):
-        if k < len(seq):
-            numbers[k] = seq[k]
-        else:
-            numbers[k] = 0
-    
+    for k in range(len(seq)):
+        numbers[k] = seq[k]
+    del numbers[len(seq):len(numbers)]
 
 
 # ----------------------------------------------------------------------
