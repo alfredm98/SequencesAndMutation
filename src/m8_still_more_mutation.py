@@ -150,7 +150,7 @@ def MUTATE_delete_negatives(numbers):
             seq = seq + [numbers[k]]
     for k in range(len(seq)):
         numbers[k] = seq[k]
-    del numbers[len(seq):len(numbers)]
+    del numbers[len(seq):len(numbers)] #idea of slicing list taken from online source
 
 
 # ----------------------------------------------------------------------
